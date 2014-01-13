@@ -11,7 +11,8 @@
 
 string str;
 
-GUEST:system_call {
+//GUEST:system_call {
+GUEST:OFFSET:system_call:0 {
     //syscname(str, RAX);
    printf("%s : %d\n", curprocname(), RAX);
 }
